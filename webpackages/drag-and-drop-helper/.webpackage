@@ -1,0 +1,14 @@
+{
+  "uploadConfigs": {
+    "dev": {
+      "url": "http://boot2docker.me/shared",
+      "proxy": "",
+      "debug": false
+    },
+    "release": {
+      "url": "https://www.cubbles.world/shared",
+      "proxy": "",
+      "debug": false
+    }
+  }
+}

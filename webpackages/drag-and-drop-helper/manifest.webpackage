@@ -1,0 +1,110 @@
+{
+  "name": "drag-and-drop-helper",
+  "groupId": "",
+  "version": "0.1.0-SNAPSHOT",
+  "modelVersion": "8.3.0",
+  "description": "Helper Components for creating a new dynamic connection by drag and drop.",
+  "docType": "webpackage",
+  "author": {
+    "name": "Judit Ross",
+    "email": "judit.ross@incowia.com"
+  },
+  "license": "MIT",
+  "keywords": [],
+  "man": [],
+  "artifacts": {
+    "elementaryComponents": [
+      {
+        "artifactId": "draggable-maker",
+        "description": "Make an HTML-Element draggable, and transport the runtimeId of the parent Compound Components. It can use for creating a new dynamic connection by drag-and-drop.",
+        "runnables": [
+          {
+            "name": "demo",
+            "path": "/demo/index.html",
+            "description": "Demo app..."
+          }
+        ],
+        "endpoints": [
+          {
+            "endpointId": "main",
+            "description": "This is recommended for you use with webcomponents.",
+            "resources": [
+              "draggable-maker.html"
+            ],
+            "dependencies": [
+              "cubx.core.rte@1.8.0/cubxpolymer/main",
+              "this/helper/html-import"
+            ]
+          }
+        ],
+        "slots": [
+          {
+            "slotId": "draggableElementSelector",
+            "description": "draggable element defined by css selector. The selector will be used in this elements parent content.",
+            "type": "string",
+            "direction": [
+              "input"
+            ]
+          }
+        ]
+      },
+      {
+        "artifactId": "parent-dropzone",
+        "description": "This element make the parent compound to a dropzone. It will create a new dynamic connection to the transported runtimeId (Data transport of the dropped element, expected the runtimeId of the Compound-Parent-Element). The dropped element keep his origin poisition in the DOM.",
+        "runnables": [
+          {
+            "name": "demo",
+            "path": "/demo/index.html",
+            "description": "Demo app..."
+          }
+        ],
+        "endpoints": [
+          {
+            "endpointId": "main",
+            "description": "This is recommended for you use with webcomponents.",
+            "resources": [
+              "parent-dropzone.html"
+            ],
+            "dependencies": [
+              "cubx.core.rte@1.8.0/cubxpolymer/main"
+            ]
+          }
+        ],
+        "slots": [
+          {
+            "slotId": "connectionDef",
+            "description": "An array of definition of connections to be created. One definition object has the attributes: name - It will be used to for connectionId; source - this is the slotId of the source Cubble; destination - this is the slotId of the destination Cubble.",
+            "type": "array",
+            "direction": [
+              "input"
+            ]
+          }
+        ]
+      }
+    ],
+    "compoundComponents": [],
+    "utilities": [
+      {
+        "artifactId": "helper",
+        "description": "Helper functions",
+        "endpoints": [
+          {
+            "endpointId": "main",
+            "resources": [
+              "js/util.js"
+            ],
+            "dependencies": []
+          },
+          {
+            "endpointId": "html-import",
+            "description": "This is recommended for you use with webcomponents.",
+            "resources": [
+              "html-import.html"
+            ],
+            "dependencies": []
+          }
+        ]
+      }
+    ]
+  }
+}

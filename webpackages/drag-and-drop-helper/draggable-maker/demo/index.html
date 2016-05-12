@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>app</title>
+
+    <script src="../../../cubx.core.rte@1.8.0/webcomponents/webcomponents-lite.js"></script>
+
+    <!--
+        Refer to the crc-loader artifact from a Cubbles-Base.
+        Take care: All other dependencies are expected to be available within the same Base!
+
+        Want to add a 'main' -script to be executed after the dependencies have been loaded?
+        If yes, add the following attribute: data-crc-main="js/my-script.js"
+    -->
+    <script src="../../../cubx.core.rte@1.8.0/crc-loader/js/main.js" data-crcinit-loadcif="true"></script>
+
+</head>
+<body>
+<h1>dragable-maker</h1>
+Not visible Element, no demo available.
+<div cubx-core-crc>
+     <draggable-maker cubx-dependency="this/draggable-maker/main"></draggable-maker>
+</div>
+<h2>Instructions</h2>
+<ul>
+<li>use it in compound component</li>
+<li>make a sibling member content draggable</li>
+<li>initialise the slot "draggableElementSelector" with a css selector of the element want to make it draggable. The selector will used in the context of the (parent) compound component.</li>
+<li>by drag the draggable element will the runtimeId of the parent compound component transported as data.</li>
+</ul>
+</body>
+</html>

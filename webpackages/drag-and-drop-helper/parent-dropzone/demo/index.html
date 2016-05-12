@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>app</title>
+
+    <script src="../../../cubx.core.rte@1.8.0/webcomponents/webcomponents-lite.js"></script>
+
+    <!--
+        Refer to the crc-loader artifact from a Cubbles-Base.
+        Take care: All other dependencies are expected to be available within the same Base!
+
+        Want to add a 'main' -script to be executed after the dependencies have been loaded?
+        If yes, add the following attribute: data-crc-main="js/my-script.js"
+    -->
+    <script src="../../../cubx.core.rte@1.8.0/crc-loader/js/main.js" data-crcinit-loadcif="true"></script>
+
+</head>
+<body>
+<!--
+    The cubbles client-runtime-container is bound to the next element.
+    Place Cubbles-Component there as child element.
+    Note: Currently there is only one element supported. This will change in future (@see PLAT-205).
+-->
+<div cubx-core-crc>
+     <parent-dropzone cubx-dependency="this/parent-dropzone/main"></parent-dropzone>
+</div>
+<h1>parent-dropzone</h1>
+<p>This Cubble make the parent compound component to a drop zone. When an item is dropped on the parent compound, will new dynamic connections created. The created connections properties are  defined in the slot "connectionDef".</p>
+<p>The new connections will established between the following elements:
+<ul>
+    <li>source element - parent compound element</li>
+    <li>destination element - the element, which runtimeId attribute was transported by the drag event</li>
+</ul>
+
+The destination and source elements should be sibling elements.
+</p>
+
+The connectionDef slot should be an array of definition objects. A definition object should define the following 3 properties:
+<ul>
+    <li>name - this property defined the connectionId</li>
+    <li>source - this property defined the source slotId</li>
+    <li>destination - this property defined the destination slotId</li>
+</ul>
+
+
+</body>
+</html>
