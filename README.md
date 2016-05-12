@@ -27,6 +27,6 @@ The selector will on the context of the (parent) compound component performed.
 By dragging the element will the runtimeId of the parent compound component as data transported.</li>
 </ul>
 
-Examples
-[Car registration demo](https://www.cubbles.world/sandbox/com.incowia.examples.car-registration-statistics@0.4.0/car-registration-statistics/index.html) - [sources](https://github.com/iCubbles/car-registration-statistics.git)
-[transportation means co2 example](https://www.cubbles.world/sandbox/transportation-co2@0.4.0/transportation-means-co2-scenario/demo/index.html) -[sources](https://github.com/iCubbles/transportation-means-co2-example.git)
+Examples:
+* [Car registration demo](https://www.cubbles.world/sandbox/com.incowia.examples.car-registration-statistics@0.4.0/car-registration-statistics/index.html) - [sources](https://github.com/iCubbles/car-registration-statistics.git)
+* [transportation means co2 example](https://www.cubbles.world/sandbox/transportation-co2@0.4.0/transportation-means-co2-scenario/demo/index.html) -[sources](https://github.com/iCubbles/transportation-means-co2-example.git)
